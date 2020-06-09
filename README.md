@@ -11,18 +11,23 @@ cd optly-in-microservice-example
  - [Python Service](./python-service)
  - [Go Service](./go-service)
 
-5. Run [Optimizely as a service](https://docs.developers.optimizely.com/full-stack/docs/setup-optimizely-agent):
+5. Run Optimizely as a service using [Optimizely Agent](https://docs.developers.optimizely.com/full-stack/docs/setup-optimizely-agent):
  - Install [Golang v1.13+](https://golang.org/dl/)
  - Clone the [Optimizely Agent repo](https://github.com/optimizely/agent).
+ - Change to the agent directory:
+ ```bash
+ cd agent
+ ```
  - For debugging during development, change the `pollingInterval` in the `config.yaml` to `10s`
- - From the Agent repo directory, setup & run Optimizely Agent with:
+ - Setup Optimizely Agent with:
  ```bash
  make setup
  ```
- Then
+ - Run Optimizely Agent with:
  ```bash
  make run
  ```
+
 
 6. Create a feature flag in [Optimizely](https://app.optimizely.com)
 
