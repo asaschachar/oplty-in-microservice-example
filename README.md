@@ -13,6 +13,9 @@
  - From the Agent repo directory, setup & run Optimizely Agent with:
  ```bash
  make setup
+ ```
+ Then
+ ```bash
  make run
  ```
 
