@@ -2,11 +2,11 @@
 
 ## Pre-requisites
 - Install [Node v10+](https://nodejs.org/en/download/)
-- Clonet [this repo](https://github.com/asaschachar/oplty-in-microservice-example)
+- Clone [this repo](https://github.com/asaschachar/oplty-in-microservice-example)
 
 ## Run the Service
 1. Open a new terminal window
-2. Navigate to the `javascript-service` directory:
+2. Navigate to the `javascript-service` directory of this repo:
 ```bash
 cd javascript-service
 ```
