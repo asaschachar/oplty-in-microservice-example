@@ -2,12 +2,16 @@
 
 1. Create a free [Optimizely Account](https://www.optimizely.com/rollouts-signup/?utm_source=youtube&utm_campaign=microservice-feature-flags)
 2. Clone this repository
-3. Setup and run one or more of the following example microservices by cloning this repo and then following instructions below:
+3. Navigate to the root directory of the repository:
+```bash
+cd optly-in-microservice-example
+```
+4. Setup and run one or more of the following example microservices by cloning this repo and then following instructions below:
  - [JavaScript Service](./javascript-service)
  - [Python Service](./python-service)
  - [Go Service](./go-service)
 
-4. Run [Optimizely as a service](https://docs.developers.optimizely.com/full-stack/docs/setup-optimizely-agent):
+5. Run [Optimizely as a service](https://docs.developers.optimizely.com/full-stack/docs/setup-optimizely-agent):
  - Install [Golang v1.13+](https://golang.org/dl/)
  - Clone the [Optimizely Agent repo](https://github.com/optimizely/agent).
  - For debugging during development, change the `pollingInterval` in the `config.yaml` to `10s`
@@ -20,12 +24,12 @@
  make run
  ```
 
-5. Create a feature flag in [Optimizely](https://app.optimizely.com)
+6. Create a feature flag in [Optimizely](https://app.optimizely.com)
 
-6. Follow the instructions below to update one or more of the microservices to evaluate the feature flag using Optimizley Agent's [activate endpoint](https://docs.developers.optimizely.com/full-stack/docs/use-optimizely-agent#section-manage-features): `POST /v1/activate?featureKey={featureKey}`
+7. Follow the instructions below to update one or more of the microservices to evaluate the feature flag using Optimizley Agent's [activate endpoint](https://docs.developers.optimizely.com/full-stack/docs/use-optimizely-agent#section-manage-features): `POST /v1/activate?featureKey={featureKey}`
  - [JavaScript Changes](./javascript-service/README.md#evaluate-the-feature-flag)
  - [Python Changes](./python-service/README.md#evaluate-the-feature-flag)
  - [Go Changes](./go-service/README.md#evaluate-the-feature-flag)
 
-7. Turn the feature flag on.
-8. Profit 🎉 !
+8. Turn the feature flag on.
+9. Profit 🎉 !
