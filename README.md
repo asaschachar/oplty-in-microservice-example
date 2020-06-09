@@ -9,7 +9,7 @@
 3. Run [Optimizely as a service](https://docs.developers.optimizely.com/full-stack/docs/setup-optimizely-agent):
  - Install [Golang v1.13+](https://golang.org/dl/)
  - Clone the [Optimizely Agent repo](https://github.com/optimizely/agent).
- - For debugging during development, change the polling interval in the config.yaml to `10s`
+ - For debugging during development, change the `pollingInterval` in the `config.yaml` to `10s`
  - From the Agent repo directory, setup & run Optimizely Agent with:
  ```bash
  make setup
