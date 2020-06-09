@@ -56,8 +56,6 @@ func handleRequest(c *gin.Context) {
     message = "Feature is off :("
   }
 
-  c.JSON(200, gin.H{
-    "Go Service: ": message,
-  })
+  c.String(200, "Go Service: " + message)
 }
 ```

@@ -3,9 +3,7 @@ package main
 import "github.com/gin-gonic/gin"
 
 func handleRequest(c *gin.Context) {
-  c.JSON(200, gin.H{
-    "Go Service: ": "Hello World!",
-  })
+  c.String(200, "Go Service: " + "Hello World!")
 }
 
 func main() {
