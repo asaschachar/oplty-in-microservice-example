@@ -14,3 +14,50 @@ cd go-service
 ```bash
 go run app.go
 ```
+
+## Evaluate the feature flag
+- Replace the `handleRequest` function with the following and update `<Your-SDK-Key>`:
+```go
+import (
+  "net/http"
+  "encoding/json"
+  "bytes"
+)
+
+func handleRequest(c *gin.Context) {
+  const sdkKey = "<Your-SDK-Key>"
+
+  userObj := map[string]string{"userId": "user123"}
+  jsonString, _ := json.Marshal(userObj)
+
+  req, _ := http.NewRequest("POST", "http://localhost:8080/v1/activate", bytes.NewBuffer(jsonString))
+
+  q := req.URL.Query()
+  q.Add("featureKey", "hello_world")
+
+  req.URL.RawQuery = q.Encode()
+  req.Header.Add("X-Optimizely-SDK-Key", sdkKey)
+
+  client := &http.Client{}
+  resp, _ := client.Do(req)
+
+  defer resp.Body.Close()
+
+  var results []map[string]interface{}
+  json.NewDecoder(resp.Body).Decode(&results)
+
+  var enabled bool
+  enabled = results[0]["enabled"].(bool)
+
+  var message string
+  if enabled {
+    message = "Feature is ON!"
+  } else {
+    message = "Feature is off :("
+  }
+
+  c.JSON(200, gin.H{
+    "Go Service: ": message,
+  })
+}
+```

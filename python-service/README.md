@@ -30,3 +30,29 @@ pip install -r requirements.txt
 python app.py
 ```
 
+## Evaluate the feature flag
+- Replace the `handle_request` function with the following and update `<Your-SDK-Key>`:
+```python
+def handle_request():
+    sdk_key = '<Your-SDK-Key>'
+
+    s = requests.Session()
+    s.headers.update({'X-Optimizely-SDK-Key': sdk_key})
+
+    payload = {
+      "userId": "user123",
+    }
+
+    params = {
+      "featureKey": "hello_world"
+    }
+
+    resp = s.post(url = 'http://localhost:8080/v1/activate', params=params, json=payload)
+    feature_result = resp.json()[0]
+
+    print(json.dumps(feature_result, indent=2))
+
+    feature_text = "Feature is On!" if feature_result['enabled'] else "Feature is off :("
+
+    return 'Python Service: ' + feature_text
+```
