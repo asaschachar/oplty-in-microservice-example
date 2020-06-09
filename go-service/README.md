@@ -6,11 +6,11 @@
 ## Run the Service
 1. Open a new terminal window
 2. Navigate to the `go-service` directory:
-```
+```bash
 cd go-service
 ```
 
 3. Run the service with:
-```
+```bash
 go run app.go
 ```
