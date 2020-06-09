@@ -23,4 +23,5 @@
  - [Python Handler](./python-service/README.md#evaluate-the-feature-flag)
  - [Go Handler](./go-service/README.md#evaluate-the-feature-flag)
 
-6. Profit 🎉 !
+6. Turn the feature flag on.
+7. Profit 🎉 !
