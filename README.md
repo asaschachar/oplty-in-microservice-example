@@ -2,17 +2,20 @@
 
 1. Create a free [Optimizely Account](https://www.optimizely.com/rollouts-signup/?utm_source=youtube&utm_campaign=microservice-feature-flags)
 2. Run one or more of the following example microservices:
- - [JavaScript Service](./javascript-service/README.md)
- - [Python Service](./python-service/README.md)
- - [Go Service](./go-service/README.md)
+ - [JavaScript Service](./javascript-service)
+ - [Python Service](./python-service)
+ - [Go Service](./go-service)
 
 3. Run [Optimizely as a service](https://docs.developers.optimizely.com/full-stack/docs/setup-optimizely-agent):
  - Install [Golang v1.13+](https://golang.org/dl/)
  - Clone the [Optimizely Agent repo](https://github.com/optimizely/agent).
- - For debugging during development, change the polling interval in the config.yaml to `10s`
+ - For debugging during development, change the `pollingInterval` in the `config.yaml` to `10s`
  - From the Agent repo directory, setup & run Optimizely Agent with:
  ```bash
  make setup
+ ```
+ Then
+ ```bash
  make run
  ```
 
@@ -23,4 +26,5 @@
  - [Python Handler](./python-service/README.md#evaluate-the-feature-flag)
  - [Go Handler](./go-service/README.md#evaluate-the-feature-flag)
 
-6. Profit 🎉 !
+6. Turn the feature flag on.
+7. Profit 🎉 !
