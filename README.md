@@ -21,7 +21,7 @@
 
 4. Create a feature flag in [Optimizely](https://app.optimizely.com)
 
-5. Update one or more of the microservices to evaluate the feature flag:
+5. Follow the instructions below to update one or more of the microservices to evaluate the feature flag using Optimizley Agent's [activate endpoint](https://docs.developers.optimizely.com/full-stack/docs/use-optimizely-agent#section-manage-features):
  - [JavaScript Handler](./javascript-service/README.md#evaluate-the-feature-flag)
  - [Python Handler](./python-service/README.md#evaluate-the-feature-flag)
  - [Go Handler](./go-service/README.md#evaluate-the-feature-flag)
