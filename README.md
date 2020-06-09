@@ -1,7 +1,7 @@
 # Example of Optimizely Running in a Microservice Environment
 
 1. Create a free [Optimizely Account](https://www.optimizely.com/rollouts-signup/?utm_source=youtube&utm_campaign=microservice-feature-flags)
-2. Run one or more of the following example microservices:
+2. Setup and run one or more of the following example microservices:
  - [JavaScript Service](./javascript-service)
  - [Python Service](./python-service)
  - [Go Service](./go-service)
