@@ -2,6 +2,7 @@
 
 ## Pre-requisites
 - Install [Node v10+](https://nodejs.org/en/download/)
+- Clonet [this repo](https://github.com/asaschachar/oplty-in-microservice-example)
 
 ## Run the Service
 1. Open a new terminal window
