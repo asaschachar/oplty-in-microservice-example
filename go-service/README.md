@@ -2,10 +2,11 @@
 
 ## Pre-requisites
 - Install [Golang v1.13+](https://golang.org/dl/)
+- Clone [this repo](https://github.com/asaschachar/oplty-in-microservice-example)
 
 ## Run the Service
 1. Open a new terminal window
-2. Navigate to the `go-service` directory:
+2. Navigate to the `go-service` directory of this repo:
 ```bash
 cd go-service
 ```
