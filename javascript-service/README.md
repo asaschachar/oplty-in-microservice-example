@@ -26,9 +26,9 @@ node app.js
 
 ```javascript
 async function handleRequest(req, res) {
-  response = await axios({
-    method: 'POST',
+  response = await httpRequest({
     url: 'http://localhost:8080/v1/activate',
+    method: 'POST',
     headers: { 'X-Optimizely-SDK-Key': '<Your-SDK-Key>' },
     params: { featureKey: 'hello_world' },
     data: JSON.stringify({ userId: 'user123'}),
