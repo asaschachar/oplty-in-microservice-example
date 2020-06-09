@@ -14,11 +14,15 @@ cd optly-in-microservice-example
 5. Run Optimizely as a service using [Optimizely Agent](https://docs.developers.optimizely.com/full-stack/docs/setup-optimizely-agent):
  - Install [Golang v1.13+](https://golang.org/dl/)
  - Clone the [Optimizely Agent repo](https://github.com/optimizely/agent).
- - From the Agent repo directory, setup & run Optimizely Agent with:
+ - Change to the agent directory:
+ ```bash
+ cd agent
+ ```
+ - Setup Optimizely Agent with:
  ```bash
  make setup
  ```
- Then
+ - Run Optimizely Agent with:
  ```bash
  make run
  ```
