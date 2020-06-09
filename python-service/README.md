@@ -58,8 +58,8 @@ def handle_request():
 ```
 
 ## Complete Example
-- The complete example code is below:
-```
+- The complete example code for app.py below:
+```python
 from flask import Flask
 import requests
 import json

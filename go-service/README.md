@@ -61,7 +61,7 @@ func handleRequest(c *gin.Context) {
 ```
 
 ## Complete Example
-- The complete example code is below:
+- The complete example code for app.go is below:
 ```go
 package main
 

@@ -55,7 +55,7 @@ async function handleRequest(req, res) {
 ```
 
 ## Complete Example
-- The complete example code is below:
+- The complete example code for app.js is below:
 ```javascript
 const express = require('express')
 const querystring = require('querystring');
