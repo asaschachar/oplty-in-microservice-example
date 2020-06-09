@@ -2,9 +2,9 @@
 
 1. Create a free [Optimizely Account](https://www.optimizely.com/rollouts-signup/?utm_source=youtube&utm_campaign=microservice-feature-flags)
 2. Run one or more of the following example microservices:
- - [JavaScript Service](./javascript-service/README.md)
- - [Python Service](./python-service/README.md)
- - [Go Service](./go-service/README.md)
+ - [JavaScript Service](./javascript-service)
+ - [Python Service](./python-service)
+ - [Go Service](./go-service)
 
 3. Run [Optimizely as a service](https://docs.developers.optimizely.com/full-stack/docs/setup-optimizely-agent):
  - Install [Golang v1.13+](https://golang.org/dl/)
