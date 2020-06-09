@@ -18,6 +18,7 @@ cd optly-in-microservice-example
  ```bash
  cd agent
  ```
+ - For debugging during development, change the `pollingInterval` in the `config.yaml` to `10s`
  - Setup Optimizely Agent with:
  ```bash
  make setup
@@ -26,7 +27,6 @@ cd optly-in-microservice-example
  ```bash
  make run
  ```
- - For debugging during development, change the `pollingInterval` in the `config.yaml` to `10s`
 
 
 6. Create a feature flag in [Optimizely](https://app.optimizely.com)
