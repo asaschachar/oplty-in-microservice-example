@@ -9,6 +9,10 @@
 ```bash
 cd go-service
 ```
+3. Install the dependencies:
+```bash
+go get -u github.com/gin-gonic/gin
+```
 
 3. Run the service with:
 ```bash
