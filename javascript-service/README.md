@@ -56,7 +56,7 @@ async function handleRequest(req, res) {
   response = await axios({
     method: 'POST',
     url: 'http://localhost:8080/v1/activate',
-    headers: { 'X-Optimizely-SDK-Key': '<Your-SDK-Key>' },
+    headers: { 'X-Optimizely-SDK-Key': 'DHbTLoxuXmGPHCTGbrSGKP' },
     params: { featureKey: 'hello_world' },
     data: JSON.stringify({ userId: 'user123'}),
   });
