@@ -1,4 +1,4 @@
-# Example of Optimizely Running in a Microservice Environment
+# Demo of Optimizely in a Microservice Environment
 
 1. Create a free [Optimizely Account](https://www.optimizely.com/rollouts-signup/?utm_source=youtube&utm_campaign=microservice-feature-flags)
 2. Clone this repository
