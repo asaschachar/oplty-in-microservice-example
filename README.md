@@ -6,7 +6,7 @@
 ```bash
 cd optly-in-microservice-example
 ```
-4. Setup and run one or more of the example microservices by following the instructions below:
+4. Setup and run one or more of the example microservices:
  - [JavaScript Service](./javascript-service)
  - [Python Service](./python-service)
  - [Go Service](./go-service)
