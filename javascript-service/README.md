@@ -26,14 +26,14 @@ node app.js
 
 ```javascript
 async function handleRequest(req, res) {
-  response = await httpRequest({
+  let response = await httpRequest({
     url: 'http://localhost:8080/v1/activate',
     method: 'POST',
     headers: { 'X-Optimizely-SDK-Key': '<Your-SDK-Key>' },
     params: { featureKey: 'hello_world' },
     data: JSON.stringify({ userId: 'user123'}),
   });
- 
+
   let enabled = Boolean(response.data[0].enabled)
   let message = enabled
     ? "Feature is ON!"

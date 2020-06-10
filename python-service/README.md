@@ -35,25 +35,15 @@ python app.py
 - Replace the `handle_request` function with the following and update `<Your-SDK-Key>`:
 ```python
 def handle_request():
-    sdk_key = '<Your-SDK-Key>'
+    resp = s.post(
+      url='http://localhost:8080/v1/activate',
+      headers={'X-Optimizely-SDK-Key': '<Your-SDK-Key>'},
+      params={ 'featureKey': 'hello_world'},
+      json={ 'userId': 'user123' }
+    )
 
-    s = requests.Session()
-    s.headers.update({'X-Optimizely-SDK-Key': sdk_key})
-
-    payload = {
-      "userId": "user123",
-    }
-
-    params = {
-      "featureKey": "hello_world"
-    }
-
-    resp = s.post(url = 'http://localhost:8080/v1/activate', params=params, json=payload)
     feature_result = resp.json()[0]
-
-    print(json.dumps(feature_result, indent=2))
-
-    feature_text = "Feature is On!" if feature_result['enabled'] else "Feature is off :("
+    feature_text = 'Feature is On!' if feature_result['enabled'] else 'Feature is off :('
 
     return 'Python Service: ' + feature_text
 ```
