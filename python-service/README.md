@@ -4,7 +4,7 @@
 - Install [Python 3](https://www.python.org/downloads/)
 - Clone [this repo](https://github.com/asaschachar/oplty-in-microservice-example)
 
-## Run Optimizely as a Service
+## Run the Service
 1. Open a new terminal window
 2. Navigate to the `python-service` directory of this repo:
 ```bash
