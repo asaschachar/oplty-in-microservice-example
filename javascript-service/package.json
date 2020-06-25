@@ -1,7 +1,8 @@
 {
   "name": "javascript-service",
   "version": "1.0.0",
-  "description": "",
+  "description": "Example JavaScript Service",
+  "repository": "github.com/asaschachar/optly-in-microservice-example",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
