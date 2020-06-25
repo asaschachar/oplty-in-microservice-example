@@ -50,7 +50,8 @@ def handle_request():
 
 ## Complete Example
 - The complete example code for app.py below:
-```pythonfrom flask import Flask
+```python
+from flask import Flask
 import requests
 import json
 
