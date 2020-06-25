@@ -35,23 +35,22 @@ python app.py
 - Replace the `handle_request` function with the following and update `<Your-SDK-Key>`:
 ```python
 def handle_request():
+    s = requests.Session()
     resp = s.post(
       url='http://localhost:8080/v1/activate',
-      headers={'X-Optimizely-SDK-Key': '<Your-SDK-Key>'},
+      headers={'X-Optimizely-SDK-Key': 'XBAY4tRMRJwYUmyuqcprpP'},
       params={ 'featureKey': 'hello_world'},
       json={ 'userId': 'user123' }
     )
 
     feature_result = resp.json()[0]
     feature_text = 'Feature is On!' if feature_result['enabled'] else 'Feature is off :('
-
     return 'Python Service: ' + feature_text
 ```
 
 ## Complete Example
 - The complete example code for app.py below:
-```python
-from flask import Flask
+```pythonfrom flask import Flask
 import requests
 import json
 
@@ -59,27 +58,17 @@ app = Flask(__name__)
 
 @app.route('/')
 def handle_request():
-    sdk_key = 'DHbTLoxuXmGPHCTGbrSGKP'
-
     s = requests.Session()
-    s.headers.update({'X-Optimizely-SDK-Key': sdk_key})
+    resp = s.post(
+      url='http://localhost:8080/v1/activate',
+      headers={'X-Optimizely-SDK-Key': 'XBAY4tRMRJwYUmyuqcprpP'},
+      params={ 'featureKey': 'hello_world'},
+      json={ 'userId': 'user123' }
+    )
 
-    payload = {
-      "userId": "user123",
-    }
-
-    params = {
-      "featureKey": "hello_world"
-    }
-
-    resp = s.post(url = 'http://localhost:8080/v1/activate', params=params, json=payload)
     feature_result = resp.json()[0]
-
-    print(json.dumps(feature_result, indent=2))
-
-    feature_text = "Feature is On!" if feature_result['enabled'] else "Feature is off :("
-
-    return 'Python Service: ' + feature_text
+    feature_text = 'Feature is On!' if feature_result['enabled'] else 'Feature is off :('
+    return 'Python Service: ' + feature_text 
 
 if __name__ == '__main__':
       app.run(host='0.0.0.0', port=3002)
