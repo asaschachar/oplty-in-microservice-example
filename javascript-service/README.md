@@ -53,14 +53,14 @@ const app = express()
 const port = 3001
 
 async function handleRequest(req, res) {
-  response = await axios({
-    method: 'POST',
+  let response = await axios({
     url: 'http://localhost:8080/v1/activate',
-    headers: { 'X-Optimizely-SDK-Key': 'DHbTLoxuXmGPHCTGbrSGKP' },
+    method: 'POST',
+    headers: { 'X-Optimizely-SDK-Key': 'XBAY4tRMRJwYUmyuqcprpP' },
     params: { featureKey: 'hello_world' },
     data: JSON.stringify({ userId: 'user123'}),
   });
- 
+
   let enabled = Boolean(response.data[0].enabled)
   let message = enabled
     ? "Feature is ON!"
