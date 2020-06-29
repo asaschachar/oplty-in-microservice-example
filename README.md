@@ -81,7 +81,7 @@ make setup
 Update one or more of the microservices to request feature flag state from the Optimizley Agent [activate endpoint](https://docs.developers.optimizely.com/full-stack/docs/use-optimizely-agent#section-manage-features): `POST /v1/activate?featureKey={featureKey}`
 
 ### For the JavaScript Service:
-- Replace the `handleRequest` function with the following and update `<Your-SDK-Key>`:
+- Replace the `handleRequest` function in `app.js` with the following and update `<Your-SDK-Key>`:
 
 ```javascript
 async function handleRequest(req, res) {
@@ -105,13 +105,13 @@ async function handleRequest(req, res) {
 3. Refresh your browser pointing to `http://localhost:3001`
 
 ### For the Python Service:
-1. Replace the `handle_request` function with the following and update `<Your-SDK-Key>`:
+1. Replace the `handle_request` function in `app.py` with the following and update `<Your-SDK-Key>`:
 ```python
 def handle_request():
     s = requests.Session()
     resp = s.post(
       url='http://localhost:8080/v1/activate',
-      headers={'X-Optimizely-SDK-Key': 'XBAY4tRMRJwYUmyuqcprpP'},
+      headers={'X-Optimizely-SDK-Key': '<Your-SDK-Key>'},
       params={ 'featureKey': 'hello_world'},
       json={ 'userId': 'user123' }
     )
