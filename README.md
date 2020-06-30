@@ -53,7 +53,7 @@ python app.py
 8. Open a browser and navigate to `http://localhost:3002`
 
 ## Step 3: Create a feature flag
-1. Create a free [Optimizely Rollouts Account](https://www.optimizely.com/rollouts-signup/?utm_source=youtube&utm_campaign=microservice-feature-flags)
+1. Create a free [Optimizely Rollouts Account](https://www.optimizely.com/rollouts-signup/?utm_source=youtube&utm_campaign=asa-microservice-feature-flags)
 2. Create a feature named `hello_world` in the [Optimizely Application](https://app.optimizely.com)
 
 ## Step 4: Setup & Run [Optimizely Agent](https://docs.developers.optimizely.com/full-stack/docs/setup-optimizely-agent)
